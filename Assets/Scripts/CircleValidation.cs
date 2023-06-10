@@ -23,6 +23,6 @@ public class CircleValidation : MonoBehaviour
         currentCircleRadius = Random.Range(minCircleRadius, maxCircleRadius);
         dashedCircle = Instantiate(dashedCirclePrefab, dashedCircleParent);
         dashedCircle.transform.localScale = Vector3.one * currentCircleRadius;
-        Debug.Log("Size: "+ currentCircleRadius *2);
+        Debug.Log("Size: "+ currentCircleRadius);
     }
 }
