@@ -13,8 +13,6 @@ public class CircleValidation : MonoBehaviour
     private float maxCircleRadius = 50f;
 
     public float currentCircleRadius;
-    private int currentScore = 0;
-
     private void Start()
     {
         StartNewLevel();

@@ -10,12 +10,13 @@ public class Instantiate : MonoBehaviour
     public CircleValidation circleValidation;
     public GameObject basketBall;
     public int scoreMultiplier=100;
+    public float radiusForCircle;
     public void BallSpawner()
     {
         float minRadius = 1f; 
         float radiusIncrement = 2.5f; 
         float radius = minRadius + radiusIncrement * (numValidate.numVal - 1);
-        float radiusForCircle = minRadius + 1 * (numValidate.numVal - 1);
+        radiusForCircle = minRadius + 1 * (numValidate.numVal - 1);
         float angleIncrement = 360f / numValidate.numVal;
         for (int i = 0; i < numValidate.numVal; i++)
         {
@@ -27,13 +28,5 @@ public class Instantiate : MonoBehaviour
             Instantiate(basketBall, position, Quaternion.identity);
         }
         //Debug.Log(numValidate.numVal + "noOf "+radiusForCircle 
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
     }
 }
