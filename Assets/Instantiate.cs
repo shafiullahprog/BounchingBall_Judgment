@@ -7,15 +7,16 @@ using UnityEngine.UI;
 public class Instantiate : MonoBehaviour
 {
     public NumValidate numValidate;
+    public CircleValidation circleValidation;
     public GameObject basketBall;
+    public int scoreMultiplier=100;
     public void BallSpawner()
     {
-        float minRadius = 1f; // Minimum radius for one basketball
-        float radiusIncrement = 2f; // Radius increment per additional basketball
+        float minRadius = 1f; 
+        float radiusIncrement = 2.5f; 
         float radius = minRadius + radiusIncrement * (numValidate.numVal - 1);
-
+        float radiusForCircle = minRadius + 1 * (numValidate.numVal - 1);
         float angleIncrement = 360f / numValidate.numVal;
-
         for (int i = 0; i < numValidate.numVal; i++)
         {
             float angle = i * angleIncrement;
@@ -25,7 +26,7 @@ public class Instantiate : MonoBehaviour
             Vector3 position = new Vector3(x, 0f, y);
             Instantiate(basketBall, position, Quaternion.identity);
         }
-        Debug.Log(numValidate.numVal + "noOf" + radius);
+        //Debug.Log(numValidate.numVal + "noOf "+radiusForCircle 
     }
 
     private void Update()
