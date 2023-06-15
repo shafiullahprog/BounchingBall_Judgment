@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CircleValidation : MonoBehaviour
 {
-    public GameObject dashedCirclePrefab; // Prefab for the dashed circle UI
-    public Transform dashedCircleParent; // Parent transform for the dashed circle UI
+    public GameObject dashedCirclePrefab;
+    public Transform dashedCircleParent;
 
     public GameObject dashedCircle;
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3437233279699000462}
   - component: {fileID: 4877852574998054614}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ring
   m_TagString: Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
